@@ -1,0 +1,62 @@
+[
+  {
+    "product-id": "GA230001",
+    "name": "Shirt",
+    "variations": [
+      {
+        "id": 1,
+        "size": "L",
+        "qty": 50,
+        "price": 400
+      },
+      {
+        "id": 2,
+        "size": "XL",
+        "qty": 30,
+        "price": 400
+      }
+    ]
+  },
+  {
+    "product-id": "GA230002",
+    "name": "pant",
+    "variations": [
+      {
+        "id": 1,
+        "size": "L",
+        "qty": 30,
+        "price": 600
+      },
+      {
+        "id": 2,
+        "size": "XL",
+        "qty": 40,
+        "price": 600
+      }
+    ]
+  },
+  {
+    "product-id": "GA230003",
+    "name": "T-Shirt",
+    "variations": [
+      {
+        "id": 1,
+        "size": "M",
+        "qty": 35,
+        "price": 300
+      },
+      {
+        "id": 2,
+        "size": "lL",
+        "qty": 35,
+        "price": 300
+      },
+      {
+        "id": 3,
+        "size": "S",
+        "qty": 40,
+        "price": 1000
+      }
+    ]
+  }
+]
