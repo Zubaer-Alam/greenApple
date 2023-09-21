@@ -6,7 +6,7 @@ const Product = require("./models/product.model");
 const app = express();
 const port = 3000;
 
-db.connect("mongodb://localhost:27017/products", {
+db.connect("mongodb://mongodb:27017/products", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
