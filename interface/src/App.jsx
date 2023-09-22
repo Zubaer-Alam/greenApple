@@ -61,7 +61,7 @@ function App() {
       variations: variationsData,
     };
 
-    console.log(data);
+    send(data);
 
     e.target.reset();
     setVariations([
