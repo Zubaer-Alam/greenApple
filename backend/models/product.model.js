@@ -4,7 +4,7 @@ const productSchema = new mongoose.Schema({
     name: String,
     variations: [
       {
-        id: Number,
+        variation: Number,
         size: String,
         qty: Number,
         price: Number,
