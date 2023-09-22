@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import VariationForm from "../VariationForm";
 
-function ProductForm() {
+const ProductForm = () => {
   const [variations, setVariations] = useState([
     {
       variation: "",
