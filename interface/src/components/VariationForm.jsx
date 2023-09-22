@@ -1,4 +1,3 @@
-// VariationForm.jsx
 import React from "react";
 
 const VariationForm = ({ removeVariation, variationData, onUpdate }) => {
