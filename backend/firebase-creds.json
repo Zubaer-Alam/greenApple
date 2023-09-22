@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "greenapple-dev",
+  "private_key_id": "4385852992022859de4f3b9652b3bec8392d6bc3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDZd5U6V7gg1gBK\nZm+vRfB/KLB6RCDvkyrXQf/i+OMjVyAZbrLTTL91ZzuR7SuLGIpLH1TlL57PeJH6\nhHihzlgDUjt4y43pZaOwDVopAzQNHFfsVFi8WO9AkXqpaWYLc7J8Fo9y9C5S6jLp\nPQ/LgvhVf28gzcsch2gC6cYJbA9bXsgD2Kj5Kjy58Ab4Z2G54hvPqa9aCH1NMpnD\nyd44aRhtLVj5xJ8lBz66Red4S+XalcrUH4wnLE/pfB1H2EP6aiGKcaWZMFBBXeLe\nbTG4FADJkwMBHrSdx9gpt5j2XepBK/WveyKd12AcWxv111Kr5zlTlI3z/DJEjGx6\nzTkRIlZ9AgMBAAECggEAGtxxe05gePXV/VqfyveJmDtPaRrHMrBr50DIuaFidPgL\nB/krb3wYXgkNS54O9dRnKJZLJy/1nszWwynfuKTDLE3Y+Lez5LNgP5u2mkBCCqiI\nl7FncIRPsRsHGqvhJeL5leg3ecx9eFJjTXn0XH/l6rGd6WBiCTkUeN+lTX6ieveE\n0wIh5uQXu+qCKqgZgaAj32DQ0nKmLwB6zI+upMDwHAhwA/2r2pc1yGEzQzeMUdyb\n4V+KhY4oOUTXerIY/0Gd/Emh+mQyEugDyNKJbyZnCvO5OFYKqPSpoN7wABJGcnZP\nK27u2j0El20TtjcHrnS3Tg/P/CznLAqyciRBJ4ynIQKBgQDwHH6PXyUFjiA+iGyu\ndZFZSRA/0dLDVMIwau5JLkdwQ15K4fHxIIIw7JHcFv3nSCslsWXAVYNSrmXbv2Ti\ndxiUIOZjr4NnbOr4Us8RYG2OYDP6v9kiF6rBjoj2I5yYzDgTYNHjTRBcKvRvdeRL\ngXFyU5MufgXBEzgneQ+S8ke0JQKBgQDn236Aqj5vntqQdPew1yi1IdqLSj4eW4d4\n13+cnZwMQXJUoji0hiV5Fi/lq6jl1CJsRoLmQQUeQ9AvJGd/9MSIAew1rGG5M0GX\ngTP8jauAMEvk3YUbJEHhddDXinwLUnVFdUV2jtw9pMD9KiDzMgmQ5cj0EIPS+i4l\ni6ogk54deQKBgQDE3FfXbIaJ+3DsVCXnE3VL4t9zs7A9feyIjeM4FL11iYZxlrYq\noCCdxBgCfsdFLKJTkRJ/kpzM2Teh51XrZwG70Q2ThX8S+PXdCufCs3CfXri/STPZ\nA9Z4Q0h/pcrqa+U93g+3cKONLZqjF+FJFqPQvDzbzW8iUYOkuVjPfdzUEQKBgQCX\nVVTEdlo6UN0n3LCu5EDVuTsEH3lcJzHNVhsdBmKMPUt6okeQzN44opqwtdKP8F5n\nfb6Cu32zu19u5bwIcKK2g0rB3boLP8FYOiTMe0utZ9ihkVUH2iqGFngxt1ovqaqR\no3GraKOoOJkepRjMo6RKxzDa3MyuME1ehEKO8MsLQQKBgEKMQ66+iG/0CgfotM1C\nBMSb0H7gRD8NoWHxgNMjQdf/0d4CFAw/rr5GhMPi/kj/T3VwYVEZB++ROzYx/CKR\np2/dSVIrKAmT6wvU5RNDql61fMpkfe/FLhcKN+RtWRJ/FKuX/RPsbWaQYCxv/OvL\nRtg6bE5ezs7WoX7HKfibz8in\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-mn3xc@greenapple-dev.iam.gserviceaccount.com",
+  "client_id": "115269338044952890793",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-mn3xc%40greenapple-dev.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

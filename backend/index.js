@@ -3,9 +3,18 @@ const bodyParser = require("body-parser");
 const db = require("mongoose");
 const Product = require("./models/product.model");
 const cors = require("cors");
+const admin = require("firebase-admin");
+const serviceAccount = require("./firebase-creds.json");
 
 const app = express();
 const port = 3000;
+
+app.use(cors());
+app.use(bodyParser.json());
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+});
 
 db.connect(
   "mongodb+srv://zubaer:88888888@mydatabase.tcfny.mongodb.net/?retryWrites=true&w=majority",
@@ -14,8 +23,21 @@ db.connect(
     useUnifiedTopology: true,
   }
 ).then(() => console.log("Database Connected"));
-app.use(cors());
-app.use(bodyParser.json());
+
+
+// [POST] authentication
+app.post("/api/authenticate", async (req, res) => {
+  const { idToken } = req.body;
+
+  try {
+    const decodedToken = await admin.auth().verifyIdToken(idToken);
+    const uid = decodedToken.uid;
+    res.status(200).json({ success: true, uid });
+  } catch (error) {
+    console.error("Token verification error:", error);
+    res.status(401).json({ success: false, error: "Authentication failed" });
+  }
+});
 
 // [POST] /api/products
 app.post("/api/products", async (req, res) => {
@@ -30,7 +52,7 @@ app.post("/api/products", async (req, res) => {
   }
 });
 
-// [GET] /api/products 
+// [GET] /api/products
 app.get("/api/products", async (req, res) => {
   try {
     const products = await Product.find();
@@ -40,6 +62,5 @@ app.get("/api/products", async (req, res) => {
     res.status(500).json({ error: "Failed to retrieve products." });
   }
 });
-
 
 app.listen(port, () => console.log("server running"));
