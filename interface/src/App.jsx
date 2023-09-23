@@ -1,5 +1,4 @@
-//import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoutes";
 import Navbar from "./components/Navbar";

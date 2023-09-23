@@ -1,5 +1,4 @@
 import "../../App.css";
-import axios from "axios";
 import React, { useState } from "react";
 import VariationForm from "../VariationForm";
 
@@ -15,11 +14,20 @@ const ProductForm = () => {
 
   const send = async (data) => {
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/products",
-        data
-      );
-      console.log("Data sent successfully:", response.data);
+      const response = await fetch("http://localhost:3000/api/products", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log("Data sent successfully:", responseData);
+      } else {
+        console.error("Error sending data:", response.status, response.statusText);
+      }
     } catch (error) {
       console.error("Error sending data:", error);
     }

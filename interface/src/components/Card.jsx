@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ProductCard({ product }) {
+const ProductCard = ({ product }) => {
   return (
     <div className="w-full mb-4">
       <div className="bg-white border-2 border-black rounded-lg shadow-lg p-4 flex flex-wrap">
@@ -31,3 +31,5 @@ export default function ProductCard({ product }) {
     </div>
   );
 }
+
+export default ProductCard;

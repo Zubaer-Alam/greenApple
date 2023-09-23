@@ -28,7 +28,7 @@ const AuthProvider = (props) => {
       });
 
       if (response.ok) {
-        console.log("login success");
+        console.log("logged In");
       } else {
         console.error("Login failed");
       }
@@ -46,7 +46,7 @@ const AuthProvider = (props) => {
       }
     });
 
-    return unsubscribe; 
+    return unsubscribe;
   }, []);
 
   return (

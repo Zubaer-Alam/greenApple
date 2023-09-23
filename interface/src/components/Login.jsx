@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import auth from "../../firebase";
 import { useAuth } from "../contexts/AuthContext";
 
 const Login = () => {

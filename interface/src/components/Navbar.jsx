@@ -13,7 +13,6 @@ const Navbar = () => {
     fetch("http://localhost:3000/api/products")
       .then((response) => response.json())
       .then((data) => setProductData(data))
-      .then(console.log(productData))
       .catch((error) => console.error("Error fetching product data:", error));
   }, []);
 
