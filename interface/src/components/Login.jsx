@@ -13,10 +13,6 @@ const Login = () => {
     try {
       await login(email.current.value, password.current.value);
       navigate("/dashboard");
-      if (user) {
-        const idToken = await user.getIdToken();
-        await sendIdTokenToServer(idToken);
-      }
     } catch (error) {
       console.error(error);
     }
