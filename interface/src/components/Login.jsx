@@ -1,15 +1,17 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import auth from "../../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
       await auth.signInWithEmailAndPassword(email, password);
-
       const user = auth.currentUser;
+      navigate("/dashboard");
       if (user) {
         const idToken = await user.getIdToken();
         await sendIdTokenToServer(idToken);

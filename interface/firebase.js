@@ -1,7 +1,6 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 
-// Your Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyCAVzpGfkhoNblw3rvpe7DfyXCHmW7coWw",
     authDomain: "greenapple-dev.firebaseapp.com",
@@ -11,7 +10,6 @@ const firebaseConfig = {
     appId: "1:179643122745:web:80e5ec6ccaea4ca51e79e8"
   };
 
-// Initialize Firebase
 const app = firebase.initializeApp(firebaseConfig);
 const auth = app.auth();
 
