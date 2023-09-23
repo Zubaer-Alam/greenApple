@@ -1,40 +1,21 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase";
+import { useAuth } from "../contexts/AuthContext";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const email = useRef();
+  const password = useRef();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
-      await auth.signInWithEmailAndPassword(email, password);
-      const user = auth.currentUser;
+      await login(email.current.value, password.current.value);
       navigate("/dashboard");
       if (user) {
         const idToken = await user.getIdToken();
         await sendIdTokenToServer(idToken);
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  const sendIdTokenToServer = async (idToken) => {
-    try {
-      const response = await fetch("http://localhost:3000/api/authenticate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ idToken }),
-      });
-
-      if (response.ok) {
-        console.log("login success");
-      } else {
-        console.error("Login failed");
       }
     } catch (error) {
       console.error(error);
@@ -54,8 +35,7 @@ const Login = () => {
             type="text"
             name="email"
             placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            ref={email}
           />
         </div>
         <div className="mb-6">
@@ -67,8 +47,7 @@ const Login = () => {
             type="password"
             name="password"
             placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            ref={password}
           />
         </div>
         <div className="text-center">
