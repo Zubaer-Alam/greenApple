@@ -16,13 +16,29 @@ const Navbar = () => {
       .catch((error) => console.error("Error fetching product data:", error));
   }, []);
 
+  function handleDeleteProduct(productId) {
+    fetch(`http://localhost:3000/api/products/${productId}`, {
+      method: "DELETE",
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log(`Product with ID ${productId} deleted`);
+        } else {
+          console.error("Error deleting product");
+        }
+      })
+      .catch((error) => {
+        console.error("Error deleting product:", error);
+      });
+  }
+
   return (
     <div>
       <Tabs.Group aria-label="Tabs with icons" style="underline">
         <Tabs.Item icon={HiTable} title="Stock">
           <div className="flex flex-wrap">
             {productData.map((product, index) => (
-              <ProductCard key={index} product={product} />
+              <ProductCard key={index} product={product} onDelete={handleDeleteProduct}/>
             ))}
           </div>
         </Tabs.Item>
