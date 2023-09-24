@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const db = require("mongoose");
 const Product = require("./models/product.model");
 const cors = require("cors");
+const figlet = require("figlet");
 const admin = require("firebase-admin");
 const serviceAccount = require("./firebase-creds.json");
 
@@ -22,8 +23,15 @@ db.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }
-).then(() => console.log("Database Connected"));
-
+).then(() => {
+  figlet("Database Connected", (err, data) => {
+    if (err) {
+      console.log("Error displaying text:", err);
+      return;
+    }
+    console.log(data);
+  });
+});
 
 // [POST] authentication
 app.post("/api/authenticate", async (req, res) => {
@@ -63,4 +71,12 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
-app.listen(port, () => console.log("server running"));
+app.listen(port, () => {
+  figlet("Server Running", (err, data) => {
+    if (err) {
+      console.log("Error displaying text:", err);
+      return;
+    }
+    console.log(data);
+  });
+});
