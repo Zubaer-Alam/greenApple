@@ -108,7 +108,7 @@ const ProductForm = () => {
         </div>
 
         <button
-          className="m-10 p-3 border-1 rounded-lg bg-green-400 hover:bg-green-300 text-white font-bold text-l"
+          className="mx-auto p-2 rounded-lg bg-blue-600 transition-transform hover:scale-105 text-white font-bold text-l"
           type="button"
           onClick={addVariation}
         >
@@ -131,10 +131,10 @@ const ProductForm = () => {
         ))}
 
         <button
-          className="m-10 p-4 border-1 rounded-lg bg-green-400 hover:bg-green-300 text-white font-bold text-xl"
+          className="m-10 p-4 border-1 rounded-lg bg-green-600 transition-transform hover:scale-105 text-white font-bold text-xl"
           type="submit"
         >
-          ADD
+          ADD PRODUCT
         </button>
       </form>
     
