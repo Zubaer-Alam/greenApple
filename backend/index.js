@@ -71,6 +71,24 @@ app.get("/api/products", async (req, res) => {
   }
 });
 
+// [DELETE] /api/products/:productId
+app.delete("/api/products/:productId", async (req, res) => {
+  const { productId } = req.params;
+
+  try {
+    const deletedProduct = await Product.findOneAndDelete({ "product-id": productId });
+
+    if (!deletedProduct) {
+      res.status(404).json({ error: "Product not found" });
+    } else {
+      res.status(204).json();
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to delete the product." });
+  }
+});
+
 app.listen(port, () => {
   figlet("Server Running", (err, data) => {
     if (err) {
