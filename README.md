@@ -3,7 +3,7 @@ Green-Apple
 Prerequisites:
 
    1. Git    : https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-   2. Docker : https://docs.docker.com/engine/install/
+   2. NodeJS : https://nodejs.org/en/download
 
 Steps:
 
@@ -12,30 +12,31 @@ Steps:
                 
           git clone https://github.com/Zubaer-Alam/greenApple
           
-   3. Navigate to the cloned directory:
+   3. Navigate to the cloned directory backend folder:
             
-          cd greenApple
+          cd greenApple/backend
           
-   4. Build and run the backend Docker containers:
-         
-          docker compose up -d
-   
-   5. Navigate to the interface directory:
-            
-          cd interface       
-   
    4. Install npm dependencies:
          
           npm i
+
+   5. Run the backend server:
+         
+          npm start
    
-   4. Run the frontend application:
+   6. Open terminal in project directory and navigate to interface directory:
+            
+          cd interface       
+   
+   7. Install npm dependencies:
+         
+          npm i
+   
+   8. Run the frontend application:
          
           npm run dev
    
-   5. Open your browser and access http://localhost:5173 to view the app.
-   6. After you have finished viewing the app, stop the backend container:
-
-          docker compose down
+   9. Open your browser and access http://localhost:5173 to view the app.
           
    
 
